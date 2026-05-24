@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exam Cram Coach / 考前冲刺教练"
+  short_description: "Bilingual final-month/week exam coach"
+  default_prompt: "Use $exam-cram-coach to run a bilingual final-month or final-week exam review using my source materials, weak points, and timed drills."
