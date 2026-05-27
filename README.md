@@ -1,54 +1,28 @@
 # sunruofei-skill
 
-Personal Codex skills for focused learning, exam preparation, and reusable study workflows.
+这是一个个人 Codex skills 仓库，用于沉淀可复用的学习、工作总结和项目交付类工作流。
 
-个人 Codex 技能仓库，用于沉淀高强度学习、考试冲刺和可复用的复习工作流。
+仓库中的每个子目录都是一个独立 skill，可以复制到 Codex 的 skills 目录中使用，也可以作为个人技能库持续维护。
 
-## Overview / 项目简介
-
-This repository currently contains `exam-cram-coach`, a bilingual Chinese/English Codex skill for learners preparing during the final month, final week, or final day before an exam.
-
-本仓库当前包含 `exam-cram-coach` 技能。这是一个中英双语的 Codex 学习教练技能，适合考试前最后一个月、最后一周或最后一天进行高强度冲刺复习。
-
-Instead of only summarizing materials, the skill focuses on active recall: it asks the learner to answer first, reviews the answer, records weak points, and brings those weak points back in later review sessions.
-
-它不是简单总结资料，而是强调主动回忆：先让学习者作答，再进行点评、记录薄弱点，并在后续复习中反复拉回这些薄弱点。
-
-## Skills / 技能列表
+## 技能列表
 
 ### `exam-cram-coach`
 
-`exam-cram-coach` is designed for learners who need a compact, pressure-aware review process rather than broad textbook-style explanation.
+考前冲刺教练，支持中文和英文场景。
 
-`exam-cram-coach` 面向时间紧、任务重的学习者，重点不是展开式讲教材，而是帮助学习者在有限时间内完成计划、默写、做题、纠错和复盘。
+适用于考试前最后一个月、最后一周或最后一天的复习规划、主动回忆训练、错点追踪、资料出题、公式复盘、案例分析和论文提纲练习。
 
-It supports:
+位置：`skills/exam-cram-coach`
 
-- final-month, final-week, and final-day study planning
-- source-material-based drills from uploaded PDFs, notes, outlines, or mock exams
-- active-recall questioning instead of passive summaries
-- weak-point tracking across sessions
-- formula, case-analysis, and essay-outline practice
-- daily progress reminders and plan adjustment
-- bilingual Chinese/English coaching
+### `weekly-work-summary`
 
-它支持：
+周报精简助手，用于把原始工作记录整理成可直接放进周报的精简版本。
 
-- 最后一个月、最后一周、最后一天冲刺规划
-- 基于上传 PDF、笔记、考试大纲、模拟题等资料出题
-- 以主动回忆为核心，而不是只给总结
-- 跨会话记录和复盘薄弱点
-- 公式、案例分析、论文大纲等专项练习
-- 每日学习进度提醒和计划动态调整
-- 中文和英文双语辅导
+适用于项目交付、系统对接、生产环境测试、验收准备、招标文件核对、总包协调、问题风险梳理和下周计划整理。默认采用 SCQA 或 START 思路组织内容，输出包含整体情况、本周完成、主要问题、下周计划、后续待办和系统对接状态等部分。
 
-## Example Use Case / 示例场景
+位置：`skills/weekly-work-summary`
 
-The included reference example is based on the Information Systems Project Manager exam. It covers process inputs and outputs, tools and techniques, performance domains, earned value, scheduling, operations research, case analysis, and essay practice.
-
-仓库中的参考示例基于“信息系统项目管理师”考前冲刺场景，覆盖十大管理过程输入输出、工具技术、八大绩效域、挣值管理、进度计算、运筹学、案例分析和论文练习。
-
-## Repository Structure / 仓库结构
+## 仓库结构
 
 ```text
 skills/
@@ -56,94 +30,33 @@ skills/
     SKILL.md
     SKILL.zh.md
     SKILL.en.md
+    README.md
     agents/
-      openai.yaml
     references/
-      information-systems-project-manager-example.md
+  weekly-work-summary/
+    SKILL.md
+    agents/
+    references/
+      weekly-summary-template.md
 ```
 
-File descriptions:
+## 使用方式
 
-- `SKILL.md`: thin entrypoint that routes to the Chinese or English guide
-- `SKILL.zh.md`: Chinese skill instructions
-- `SKILL.en.md`: English skill instructions
-- `agents/openai.yaml`: skill metadata
-- `references/information-systems-project-manager-example.md`: exam-cram reference example
+将需要的 skill 目录复制到 Codex 的 skills 目录，或在支持技能仓库的环境中直接引用本仓库。
 
-文件说明：
-
-- `SKILL.md`：技能入口文件，根据语言引导读取中文或英文说明
-- `SKILL.zh.md`：中文技能说明
-- `SKILL.en.md`：英文技能说明
-- `agents/openai.yaml`：技能元数据
-- `references/information-systems-project-manager-example.md`：考试冲刺参考示例
-
-## How To Use / 使用方式
-
-Install or copy `skills/exam-cram-coach` into your Codex skills directory, then ask Codex to use `exam-cram-coach`.
-
-将 `skills/exam-cram-coach` 安装或复制到你的 Codex skills 目录后，在对话中要求 Codex 使用 `exam-cram-coach` 即可。
-
-For best results, provide:
-
-- exam name and exam date
-- available study time per day
-- uploaded source materials, such as PDFs, notes, mock exams, or official outlines
-- weak areas and recent wrong answers
-- preferred coaching language
-
-为了获得更好的效果，建议提供：
-
-- 考试名称和考试日期
-- 每天可用学习时间
-- 上传的资料，例如 PDF、笔记、模拟题、官方大纲
-- 当前薄弱点和最近错题
-- 希望使用的辅导语言
-
-English prompt example:
+示例：
 
 ```text
-Use exam-cram-coach. I have 5 days left before the exam, 2 hours per day.
-Use my uploaded PDFs as the main source. Quiz me first, then track weak points
-and review them tomorrow.
+使用 exam-cram-coach。我距离考试还有 5 天，希望先做主动回忆训练。
 ```
-
-中文提示词示例：
 
 ```text
-使用 exam-cram-coach。我距离考试还有 5 天，每天最多学 2 小时。
-请以我上传的资料为准，先让我默写和做题，再记录薄弱点，
-明天和最后一天继续让我复盘。
+使用 weekly-work-summary，把这些原始周报内容整理成可直接放进周报的完整精简版。
 ```
 
-## Coaching Principles / 辅导原则
+## 维护说明
 
-The skill follows four principles:
-
-- Ask the learner to answer first, then review and optimize.
-- Preserve official exam terminology.
-- Track weak points and force repeated recall.
-- Adjust the plan when time, progress, or confidence changes.
-
-该技能遵循四个原则：
-
-- 先让学习者作答，再点评和优化
-- 保留考试官方术语，不随意改写概念
-- 记录薄弱点，并通过重复回忆强化掌握
-- 根据时间、进度和信心变化动态调整计划
-
-## Current Status / 当前状态
-
-Initial version is available with:
-
-- Chinese guide: `SKILL.zh.md`
-- English guide: `SKILL.en.md`
-- thin entrypoint: `SKILL.md`
-- reference example: Information Systems Project Manager final-week cram workflow
-
-当前已包含：
-
-- 中文说明：`SKILL.zh.md`
-- 英文说明：`SKILL.en.md`
-- 技能入口：`SKILL.md`
-- 参考示例：信息系统项目管理师最后一周冲刺工作流
+- 每个 skill 的核心说明放在 `SKILL.md`。
+- `agents/openai.yaml` 用于展示名称、简短说明和默认提示词。
+- 较长的模板、示例或参考资料放在 `references/` 中。
+- 仓库根目录 README 只说明整体用途；单个 skill 的详细说明放在对应目录内。

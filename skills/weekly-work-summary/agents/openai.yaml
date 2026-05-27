@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Weekly Work Summary"
+  short_description: "Polish raw work notes into concise SCQA/START weekly reports"
+  default_prompt: "Use $weekly-work-summary to turn my raw weekly work notes into a concise Chinese weekly report that can be pasted directly into my update."
