@@ -55,19 +55,27 @@ For very short notes, collapse sections 5-7.
 - Convert vague wording into "问题 + 影响 + 下一步".
 - Keep bullets parallel and action-oriented.
 - Prefer "已完成/进行中/待确认/需持续跟进/存在延期风险" over loose descriptions.
-- For acceptance or audit work, emphasize contract or tender compliance, demonstration readiness, and verification risk.
+- For acceptance or audit work, emphasize delivery-basis compliance, demonstration readiness, and verification risk.
 - For integration work, emphasize external dependency, current status, owner, and next coordination action.
 - For deployment work, separate environment, domain, hardware, network access, and operations handover.
 
 ## Project Delivery Emphasis
 
-When notes include terms such as `招标文件`, `总包`, `监理`, `业主`, `内测`, `董事长查看系统`, `管理驾驶舱`, `总线`, `IDD`, or `生产环境`, highlight:
+When notes include project-specific names, abstract them into reusable categories before writing the summary:
 
-- whether the feature exists according to the tender document;
-- whether the implementation is correct enough for acceptance;
+- delivery basis: contract requirements, acceptance criteria, scope documents, interface documents, or agreed feature lists;
+- milestone events: internal validation, external review, leadership demo, acceptance inspection, go-live, production verification, or handover;
+- key stakeholders: owner, client, prime contractor, supervisor, vendor, platform team, operations team, or other decision makers;
+- key modules: cockpit, dashboard, report, workflow, integration, mobile, deployment, monitoring, or other high-risk feature areas;
+- integration dependencies: upstream systems, downstream systems, integration channels, API documents, data sources, test devices, or environment readiness.
+
+After abstraction, highlight:
+
+- whether the feature exists according to the delivery basis;
+- whether the implementation is correct enough for the current milestone;
 - whether the demo path and data are ready;
-- which external systems still block progress;
-- which items need total contractor, vendor, owner, or supervisor confirmation.
+- which external dependencies still block progress;
+- which items need stakeholder confirmation, decision, or coordination.
 
 ## Reference
 

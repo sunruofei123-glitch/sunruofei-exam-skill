@@ -11,7 +11,7 @@ Use this reference when writing Chinese weekly reports from rough notes.
 
 本周主要围绕【核心工作1】、【核心工作2】和【核心工作3】开展工作。
 
-通过【内测/联调/核对/沟通】发现，当前主要问题集中在：【问题1】、【问题2】、【问题3】。其中，【最大风险】可能影响【验收/演示/上线/联调目标】。
+通过【内部验证/联调/交付依据核对/干系人沟通】发现，当前主要问题集中在：【问题1】、【问题2】、【问题3】。其中，【最大风险】可能影响【验收/演示/上线/联调目标】。
 
 下周将优先推进【动作1】、【动作2】和【动作3】，并持续跟进【外部依赖或待确认事项】。
 
@@ -30,7 +30,7 @@ Use this reference when writing Chinese weekly reports from rough notes.
 ## 四、下周计划
 
 1. 保障【演示/验收/联调/上线】。
-2. 根据【内测/招标文件/联调结果】调整【功能/信息项/页面】。
+2. 根据【内部验证/交付依据/联调结果】调整【功能/信息项/页面】。
 3. 跟进【未接入/未协调/未确认】事项。
 
 ## 五、后续待办事项
@@ -64,16 +64,16 @@ Use this reference when writing Chinese weekly reports from rough notes.
 ## Phrasing Patterns
 
 - Raw: "测试不够充分，细节问题较多"
-  Polished: "当前测试覆盖仍不充分，细节问题较多，需结合招标文件和演示路径继续验证。"
+  Polished: "当前测试覆盖仍不充分，细节问题较多，需结合交付依据和演示路径继续验证。"
 
 - Raw: "业务逻辑不能闭环"
   Polished: "当前业务逻辑尚未闭环，演示时存在解释风险，需优先调整。"
 
-- Raw: "总包还没有推进"
-  Polished: "相关事项已同步总包，目前总包反馈尚未推进，后续需持续跟进协调进度。"
+- Raw: "关键协同方还没有推进"
+  Polished: "相关事项已同步关键协同方，目前对方反馈尚未推进，后续需持续跟进协调进度。"
 
-- Raw: "未接入总线"
-  Polished: "该系统尚未接入总线，需推动厂商明确接入计划，并在条件具备后开展联调。"
+- Raw: "未接入集成通道"
+  Polished: "该系统尚未接入集成通道，需推动相关方明确接入计划，并在条件具备后开展联调。"
 
 - Raw: "需要确认是否需要"
   Polished: "该事项仍待确认，需明确是否纳入本阶段范围及后续处理方式。"
@@ -82,10 +82,10 @@ Use this reference when writing Chinese weekly reports from rough notes.
 
 When polishing project delivery weekly notes, check whether the report covers:
 
-- tender or contract compliance;
+- delivery-basis or contract compliance;
 - demo readiness and demo data;
-- acceptance or supervisor inspection risk;
+- acceptance or milestone inspection risk;
 - production environment testing;
 - external system integration status;
-- owner, total contractor, vendor, or platform dependencies;
-- deployment issues such as OS replacement, Redis, Nginx, domain names, network exposure, hardware resources, and operations handover.
+- stakeholder, vendor, platform, or operations dependencies;
+- deployment issues such as OS replacement, middleware, reverse proxy, domain names, network exposure, hardware resources, and operations handover.
